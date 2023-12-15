@@ -1,12 +1,13 @@
 #include "MdLcd.h"
 #include <M5Stack.h>
 
-void MdLcd::displayJpgImage(const char* path)
+void MdLcd::displayJpgImage(const char *path)
 {
     M5.Lcd.drawJpgFile(SD, path);
 }
 
-void MdLcd::displayJpgImageCoordinate(const char* path, uint16_t x, uint16_t y)
+
+void MdLcd::displayJpgImageCoordinate(const char *path, uint16_t x, uint16_t y)
 {
     M5.Lcd.drawJpgFile(SD, path, x, y);
 }
@@ -21,7 +22,7 @@ void MdLcd::fillBackgroundWhite()
     M5.Lcd.fillScreen(0xFFFF);
 }
 
-void MdLcd::displayText(const char* text, int x, int y)
+void MdLcd::displayText(const char *text, int x, int y)
 {
     M5.Lcd.setCursor(x, y);
     M5.Lcd.setTextColor(0x0000, 0xFFFF);
